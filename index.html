@@ -1,0 +1,118 @@
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Slider Integration Example</title>
+</head>
+<body>
+    <div class="intro-text">
+        <h2>Optical Business Performance Tool</h2>
+        <p>Many independent optical owners become so involved in daily care of their patients that they forget to look at performance of the business.</p>
+        <p>Simple numbers from your practice management reports can give you valuable insights into the growth potential of your practice.</p>
+        <p>The Provision business coach team use information like this daily to help members implement improvement strategies to reach that potential.</p>
+        <p>As an example, the coaches have selected 5 typical indicators for you to explore.</p>
+        <p>Take a peek into your opportunities for a stronger practice by using the simple tool below.</p>
+        <p>Run an Optomate or Sunix KPI report for any 12 month period.</p>
+        <p>Enter the six key metrics from your report as below into the tool.</p>
+    </div>
+
+    <div class="imagetable intro-text">
+        <table>
+          <tr>
+            <td><img class="imageSize" src="https://optom.provision.com.au/wp-content/uploads/sites/3/2024/02/Screenshot-2024-02-22-at-9.45.33%E2%80%AFpm.png" alt=""> </td>
+          </tr>
+        </table>
+      </div>
+
+    <div class="top">
+        <center><h3 id="main-h">Enter the following from your KPI report</h3></center>
+        <div class="figures">            
+            <div class="fig-item"> <p class="figures-h2">total sales</p> <input type="number" id="totalSales"></div>
+            <div class="fig-item"> <p class="figures-h2">per px $</p> <input type="text" id="perPx"></div>
+            <div class="fig-item"> <p class="figures-h2">av consultation</p> <input type="text" id="avConsultation"></div>
+            <div class="fig-item"> <p class="figures-h2">patient num</p> <input type="text" id="patientnum" placeholder="Number of Patients"></div>
+            <div class="fig-item"> <p class="figures-h2">conversion</p> <input type="text" id="conversion"></div>
+            <div class="fig-item"> <p class="figures-h2">multi pairs</p> <input type="text" id="multiPairs"></div>           
+        </div>
+    </div>
+  
+    <div class="functions">
+        <center><h3>Top 5 opportunities to grow your business</h3></center>
+        <div class="ops">
+            <div class="row">
+                <p class="item-1"></p>
+                <p class="item-2">Current to Potential</p>
+                <p class="item-4">Increase by an extra?</p>
+                <p class="item-5">Potential increase</p>
+            </div>
+        </div>
+    </div>
+    <!-- Updated section with sliders -->
+    <div class="row">
+        <p class="item-1">Increase No of patients</p>
+        <!-- <center><button id="calculateIncreaseNumberOfPatients">calculate</button></center> -->
+        <p class="item-2" id="currentPatientsPerDay">0</p>
+        <p class="item-4">
+            <input type="range" id="patientsPerDayIncreaseSlider" min="0" max="10" step="1" value="1">
+            <span id="patientsPerDayIncreaseValue">1</span>
+        </p>
+        <p id="resultIncreaseNumberOfPatients" class="results"></p>
+    </div>
+
+    <div class="row">
+        <p class="item-1">Increase Income from Each Patient</p>
+        <!-- <center><button id="calculateIncreaseIncome">calculate</button></center> -->
+        <p class="item-2">0</p>
+        <p class="item-4">
+            <input type="range" id="increasedIncomeSlider" min="0" max="100" step="1" value="10">
+            <span id="increasedIncomeValue">$10</span>
+        </p>
+        <p id="resultIncome" class="results"></p>
+    </div>
+
+    <div class="row">
+        <p class="item-1">Increase productivity (Same Day Conversion)</p>
+        <!-- <center><button id="calculateIncreaseProductivity">calculate</button></center> -->
+        <p class="item-2">0</p>
+        <p class="item-4">
+            <input type="range" id="increaseConversionPercentageSlider" min="0" max="100" step="1" value="50">
+            <span id="increaseConversionPercentageValue">50%</span>
+        </p>
+        <p id="resultIncreaseProductivity" class="results"></p>
+    </div>
+
+    <div class="row">
+        <p class="item-1">Increase in Consultation Income</p>
+        <!-- <center><button id="calculateConsultationIncome">calculate</button></center> -->
+        <p class="item-2">0</p>
+        <p class="item-4">
+            <input type="range" id="increaseFeeSlider" min="0" max="100" step="1" value="10">
+            <span id="increaseFeeValue">$10</span>
+        </p>
+        <p id="resultIncreaseFeeForPatients" class="results"></p>
+    </div>
+
+    <div class="row">
+        <p class="item-1">Increase Multiple sales</p>
+        <!-- <center><button id="calculateMultipleSales">calculate</button></center> -->
+        <p class="item-2">0</p>
+        <p class="item-4">
+            <input type="range" id="multipleSalesSlider" min="0" max="100" step="1" value="20">
+            <span id="multipleSalesValue">20%</span>
+        </p>
+        <p id="resultMultipleSales" class="results"></p>
+    </div>
+
+    <div class="row">
+        <p class="item-1"><b>Total Potential Increase</b></p>
+        <center><button id="calculateAll">Calculate All</button></center>
+        <p id="totalPotentialIncrease" class="results">0</p>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
