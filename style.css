@@ -55,6 +55,7 @@ body{
 .row{
     display: flex;
     justify-content:center;
+    padding: 0 100px 0 100px;
 }
 .row input{
     align-items: center;
